@@ -2,6 +2,7 @@
 from functools import reduce
 
 
+# also from math import gcd
 def gcd(a, b):
     # invariant: d | a and d | b -> d | a % b
     if not b:
