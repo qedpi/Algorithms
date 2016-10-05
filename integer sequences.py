@@ -74,22 +74,35 @@ def series_geomet(start, ratio, steps):
 
 # variant examples
 
-def fibo_last_digit_tr(n, a=0, b=1):
+def fibo_mod_m_tr(n, a=0, b=1, m=10):
     if not n:
         return a
     else:
-        return fibo_last_digit_tr(n - 1, a=b, b=(a + b) % 10)
+        return fibo_mod_m_tr(n - 1, a=b, b=(a + b) % m)
 
 
-def fibo_last_digit_it(n):
+# use a general periodic detector decorator
+def fibo_mod_m_it(n, m=10):
     a, b = 0, 1
 
     while n:
         n -= 1
-        a, b = b, (a + b) % 10
+        a, b = b, (a + b) % m
 
     return a
+print(fibo_mod_m_it(327305))
 
 
-print(fibo_last_digit_it(327305))
+# note that sum of Fn is F_n+2 - 1, instead we present the iterative method
+def fibo_sum_tr(n, *, a=0, b=1, acc=0):
+    if not n:
+        return acc
+    else:
+        return fibo_sum_tr(n - 1, a=b, b=a + b, acc=acc + b)
+print(fibo_sum_tr(18))
+
+
+def fibo_partial_sum_tr(start, end):
+    # both inclusive
+    return fibo_sum_tr(end) - fibo_sum_tr(start - 1)
 

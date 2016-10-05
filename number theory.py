@@ -28,6 +28,12 @@ def gcdb(a, b):  # binary gcd
             return gcdb((a - b) // 2, b)
 
 
+def gcd_it(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
 def gcd_n(xs):
     return reduce(gcd, xs)
 
