@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1557a273-8ea7-4b12-ba06-4f73c914f3fd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/decorators.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/integer sequences.py" afterPath="$PROJECT_DIR$/integer sequences.py" />
     </list>
     <ignored path="Algorithms.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -17,12 +16,12 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Algorithms$sorting.coverage" NAME="sorting Coverage Results" MODIFIED="1475640813053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Algorithms$decorators.coverage" NAME="decorators Coverage Results" MODIFIED="1475646170004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Algorithms$decorators.coverage" NAME="decorators Coverage Results" MODIFIED="1475646397104" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Algorithms$strings.coverage" NAME="strings Coverage Results" MODIFIED="1475644601903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Algorithms$search.coverage" NAME="search Coverage Results" MODIFIED="1475589892014" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Algorithms$cominatorics.coverage" NAME="cominatorics Coverage Results" MODIFIED="1475589337852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Algorithms$number_theory.coverage" NAME="number theory Coverage Results" MODIFIED="1475644565503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Algorithms$integer_sequences.coverage" NAME="integer sequences Coverage Results" MODIFIED="1475644193309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Algorithms$integer_sequences.coverage" NAME="integer sequences Coverage Results" MODIFIED="1475646412942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -76,17 +75,17 @@
       <file leaf-file-name="integer sequences.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/integer sequences.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+            <state relative-caret-position="216">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#80#172#0" expanded="false" />
-                <element signature="e#213#298#0" expanded="false" />
-                <element signature="e#326#404#0" expanded="false" />
-                <element signature="e#431#455#0" expanded="false" />
-                <element signature="e#481#554#0" expanded="false" />
-                <element signature="e#591#676#0" expanded="false" />
-                <element signature="e#702#725#0" expanded="false" />
+                <element signature="e#123#215#0" expanded="false" />
+                <element signature="e#256#341#0" expanded="false" />
+                <element signature="e#369#447#0" expanded="false" />
+                <element signature="e#474#498#0" expanded="false" />
+                <element signature="e#524#597#0" expanded="false" />
+                <element signature="e#634#719#0" expanded="false" />
+                <element signature="e#745#768#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -142,10 +141,10 @@
         <option value="$PROJECT_DIR$/sorting.py" />
         <option value="$PROJECT_DIR$/Fibonacci.py" />
         <option value="$PROJECT_DIR$/cominatorics.py" />
-        <option value="$PROJECT_DIR$/integer sequences.py" />
         <option value="$PROJECT_DIR$/number theory.py" />
         <option value="$PROJECT_DIR$/strings.py" />
         <option value="$PROJECT_DIR$/decorators.py" />
+        <option value="$PROJECT_DIR$/integer sequences.py" />
       </list>
     </option>
   </component>
@@ -215,7 +214,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
-  <component name="RunManager" selected="Python.decorators">
+  <component name="RunManager" selected="Python.integer sequences">
     <configuration default="false" name="number theory" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -539,10 +538,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.decorators" />
-        <item index="1" class="java.lang.String" itemvalue="Python.strings" />
-        <item index="2" class="java.lang.String" itemvalue="Python.number theory" />
-        <item index="3" class="java.lang.String" itemvalue="Python.integer sequences" />
+        <item index="0" class="java.lang.String" itemvalue="Python.integer sequences" />
+        <item index="1" class="java.lang.String" itemvalue="Python.decorators" />
+        <item index="2" class="java.lang.String" itemvalue="Python.strings" />
+        <item index="3" class="java.lang.String" itemvalue="Python.number theory" />
         <item index="4" class="java.lang.String" itemvalue="Python.sorting" />
       </list>
     </recent_temporary>
@@ -570,7 +569,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -630,13 +629,13 @@
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#80#172#0" expanded="false" />
-            <element signature="e#213#298#0" expanded="false" />
-            <element signature="e#326#404#0" expanded="false" />
-            <element signature="e#431#455#0" expanded="false" />
-            <element signature="e#481#554#0" expanded="false" />
-            <element signature="e#591#676#0" expanded="false" />
-            <element signature="e#702#725#0" expanded="false" />
+            <element signature="e#123#215#0" expanded="false" />
+            <element signature="e#256#341#0" expanded="false" />
+            <element signature="e#369#447#0" expanded="false" />
+            <element signature="e#474#498#0" expanded="false" />
+            <element signature="e#524#597#0" expanded="false" />
+            <element signature="e#634#719#0" expanded="false" />
+            <element signature="e#745#768#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -747,17 +746,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/integer sequences.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        <state relative-caret-position="216">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#80#172#0" expanded="false" />
-            <element signature="e#213#298#0" expanded="false" />
-            <element signature="e#326#404#0" expanded="false" />
-            <element signature="e#431#455#0" expanded="false" />
-            <element signature="e#481#554#0" expanded="false" />
-            <element signature="e#591#676#0" expanded="false" />
-            <element signature="e#702#725#0" expanded="false" />
+            <element signature="e#123#215#0" expanded="false" />
+            <element signature="e#256#341#0" expanded="false" />
+            <element signature="e#369#447#0" expanded="false" />
+            <element signature="e#474#498#0" expanded="false" />
+            <element signature="e#524#597#0" expanded="false" />
+            <element signature="e#634#719#0" expanded="false" />
+            <element signature="e#745#768#0" expanded="false" />
           </folding>
         </state>
       </provider>

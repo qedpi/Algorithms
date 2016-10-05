@@ -1,12 +1,15 @@
 from functools import reduce
 from operator import add
 
+from decorators import memoizex
 
+
+@memoizex
 def fibonacci_r(n):
     if n <= 2:
         return 1
     else:
-        return fibonacci_r(n - 1) + fibonacci_r(n - 1)
+        return fibonacci_r(n - 1) + fibonacci_r(n - 2)
 
 
 def fibonacci_tr(n, *, a=0, b=1):
@@ -65,3 +68,5 @@ def series_geomet(start, ratio, steps):
     # finite geometric series
     return start * ratio ** (steps + 1) // (ratio - 1)
 
+
+print(fibonacci_r(50))
