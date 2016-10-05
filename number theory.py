@@ -2,7 +2,7 @@
 from functools import reduce
 
 
-# also from math import gcd
+# also from math import gcd, tail recursive
 def gcd(a, b):
     # invariant: d | a and d | b -> d | a % b
     if not b:
@@ -28,7 +28,7 @@ def gcdb(a, b):  # binary gcd
             return gcdb((a - b) // 2, b)
 
 
-def gcdn(xs):
+def gcd_n(xs):
     return reduce(gcd, xs)
 
 
@@ -36,7 +36,24 @@ def lcm(a, b):
     return a // gcd(a, b) * b
 
 
-def lcmn(xs):
+def lcm_n(xs):
     return reduce(lcm, xs)
 
+
+def prime_sieve_range(n):
+    # find primes up to n
+    is_prime = [True] * (n + 1)
+    is_prime[0], is_prime[1] = False, False
+
+    primes = []
+    for p in range(2, n + 1):
+        if is_prime[p]:
+            target = p ** 2
+            primes.append(p)
+
+            while target < n + 1:
+                is_prime[target] = False
+                target += p
+
+    return primes
 
