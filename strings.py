@@ -1,5 +1,10 @@
+import sys
+sys.setrecursionlimit(30000)
+
+from decorators import memoize
 
 
+@memoize
 def lcs_r(a, b):
     # find the longest common subsequence of a and b
 
@@ -10,3 +15,6 @@ def lcs_r(a, b):
     else:
         return max(lcs_r(a[:-1], b), lcs_r(a, b[:-1]))
 
+
+print(lcs_r("hellooaneihnoeatihhoaihnoahitnoaehtinhoaeioeathihnaoeihoeasihoeanihsoahsi",
+            "mellowooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo"))
