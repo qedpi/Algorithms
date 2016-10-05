@@ -11,20 +11,6 @@ def ceilg(x, interval):
     return ceil(x // interval) * interval
 
 
-def sum_to_n(n):
-    return n * (n + 1) // 2
-
-
-def seriesa(start, step, steps):
-    # finite arthimetic series
-    return start + sum_to_n(step) * step
-
-
-def seriesg(start, ratio, steps):
-    # finite geometric series
-    return start * ratio ** (steps + 1) // (ratio - 1)
-
-
 def fact(n):
     def loop(n, acc):  # tail recursive
         if not n:
