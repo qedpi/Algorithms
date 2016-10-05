@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(999999999)
+
 from functools import reduce
 from operator import add
 
@@ -69,4 +72,24 @@ def series_geomet(start, ratio, steps):
     return start * ratio ** (steps + 1) // (ratio - 1)
 
 
-print(fibonacci_r(50))
+# variant examples
+
+def fibo_last_digit_tr(n, a=0, b=1):
+    if not n:
+        return a
+    else:
+        return fibo_last_digit_tr(n - 1, a=b, b=(a + b) % 10)
+
+
+def fibo_last_digit_it(n):
+    a, b = 0, 1
+
+    while n:
+        n -= 1
+        a, b = b, (a + b) % 10
+
+    return a
+
+
+print(fibo_last_digit_it(327305))
+
