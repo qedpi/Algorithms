@@ -14,7 +14,7 @@ def greedy_coin_change(n, denoms=(1, 5, 10)):
             try_denom += 1
             if try_denom == len(denoms):
                 return -1 if n else coins_used
-print(greedy_coin_change(19))
+# print(greedy_coin_change(19))
 
 
 def knapsack_fractional(cap, ws, vs):
@@ -63,7 +63,7 @@ def point_interval_coverage(intervals):
 # print(point_interval_coverage([(4, 5), (0, 2), (1, 3)]))
 
 
-# aka grouping by interests
+# aka grouping children by ages
 def interval_point_coverage(width, points):
     intervals = 0
     points.sort(reverse=True)
@@ -75,6 +75,27 @@ def interval_point_coverage(width, points):
 
     return intervals
 # print(interval_point_coverage(2, [1, 5, 2]))
+
+
+# aka car refueling,
+def refueling(width, points):
+    stops = 0
+    points = points[::-1]
+
+    farthest = points.pop()
+
+    while points:
+        upto = farthest + width
+        while points and points[-1] <= upto:
+            farthest = points.pop()
+            if not points:
+                return stops
+        else:
+            stops += 1
+            if farthest == upto - width: # impossible
+                return -1
+    return stops
+# print('refueling', refueling(5, [0, 1, 2,  6, 11]))
 
 
 # aka max prize places for competition
@@ -95,8 +116,8 @@ def max_num_from_digits(n):
 
 def max_num_from_nums(xs):
     from operator import itemgetter
-    xs = sorted(['.'.join(str(x)) + '~' for x in xs])
-    xs = [''.join(x[:-1].split('.')) for x in xs]
-    return ''.join(reversed(xs))
+    xs = sorted([str(x) + '~' for x in xs])
+    return ''.join([x[:-1] for x in reversed(xs)])
+# print(max_num_from_nums([90, 9, 4, 42, 99]))
 
-print(max_num_from_nums([90, 9, 4, 42, 99]))
+
