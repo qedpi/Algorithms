@@ -11,21 +11,53 @@ def gcd(a, b):
         return gcd(b, a % b)
 
 
-def gcdb(a, b):  # binary gcd
-    if not b or a == b:
-        return a
-    else:
-        aeven, beven = not a % 2, not b % 2
+def odd(x):
+    return x % 2
 
-        if aeven and beven:  # extract a factor of 2
-            return 2 * gcdb(a // 2, b // 2)
-        elif aeven:
-            return gcdb(a // 2, b)
-        elif beven:
-            return gcdb(a, b // 2)
-        else:  # both odd
-            b, a = sorted([a, b])
-            return gcdb((a - b) // 2, b)
+
+def even(x):
+    return not x % 2
+
+
+def gcd_b(a, b, acc=1):  # binary gcd
+    if a < b:  # swap to make a geq b
+        a, b = b, a
+
+    if not b:  # base case
+        return a * acc
+
+    if even(a):
+        a //= 2
+        if even(b):
+            b //= 2
+            acc <<= 1
+    else:
+        if even(b):
+            b //= 2
+        else:
+            a = (a - b) // 2
+
+    return gcd_b(a, b, acc)
+# print(gcd_b(12, 30))
+
+
+def gcd_b_it(a, b, acc=1):  # binary gcd
+    while b:  # base case not reached
+        if a < b:  # swap to make a geq b
+            a, b = b, a
+
+        if even(a):
+            a //= 2
+            if even(b):
+                b //= 2
+                acc <<= 1
+        else:
+            if even(b):
+                b //= 2
+            else:
+                a = (a - b) // 2
+    return a * acc
+# print(gcd_b_it(12, 30))
 
 
 def gcd_it(a, b):

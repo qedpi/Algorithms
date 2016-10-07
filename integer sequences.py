@@ -64,13 +64,22 @@ def sum_to_n_b(n):
 
 def series_arith(start, step, steps):
     # finite arthimetic series
-    return start + sum_to_n_e(step) * step
+    return start * step + sum_to_n_e(steps - 1) * step
 
 
-def series_geomet(start, ratio, steps):
+def series_arith2(start, step, upto):
+    steps = (upto - start) // step + 1
+    return series_arith(start, step, steps)
+
+
+def series_geomet(a, r, n):
     # finite geometric series
-    return start * ratio ** (steps + 1) // (ratio - 1)
+    return a ** n * r ** sum_to_n_e(n - 1)
 
+
+# have to solve an equation, maybe later
+def series_geomet_upto(a, r, upto):
+    pass
 
 # variant examples
 

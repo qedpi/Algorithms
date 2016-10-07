@@ -137,6 +137,24 @@ def suffix_trie_match_patterns(text, patterns):
 print(suffix_trie_match_patterns('banana', ['a']))
 
 
+# Naive Burrows-Wheeler Transform
+def bwt_naive(s):
+    s += '$'
+
+    rotations = []
+    for i in range(len(s)):
+        rotations.append(s[i:] + s[:i])
+
+    rotations.sort()
+    s_bwt = ''.join([s[-1] for s in rotations])
+    return s_bwt
+print(bwt_naive('banana'))
+
+
+def bwt_inverse_naive(s):
+    c_first, c_last = sorted(s), s
+    pass
+
 
 
 
