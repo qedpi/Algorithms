@@ -20,7 +20,7 @@ def search_linear_pos(target, xs):
 
 
 def search_binary(target, xs):
-    low, high = 0, len(xs)
+    low, high = 0, len(xs) - 1
 
     while low <= high:
         mid = low + (high - low) // 2
