@@ -56,29 +56,22 @@ def sort_insertion(xs):
 
 
 def merge(xs, ys):
-    INF = float('inf')
-    xs.append(INF)
-    ys.append(INF)
-    i, j = 0, 0
     merged = []
-    for k in range(len(xs) + len(ys) - 2):
-        # print(merged)
-        if xs[i] < ys[j]:
-            merged.append(xs[i])
-            i += 1
-        else:
-            merged.append(ys[j])
-            j += 1
-    return merged
+    while xs or ys:
+        larger = ys if ys and (not xs or ys[-1] > xs[-1]) else xs
+        merged.append(larger.pop())
+    return merged[::-1]
 
 
 def sort_merge(xs):
-    if len(xs) < 2:
-        return xs
-
     mid = len(xs) // 2
-    left, right = xs[:mid], xs[mid:]  # second half is bigger if odd
-    return merge(sort_merge(left), sort_merge(right))
+
+    if not mid:  # base case
+        return xs
+    else:
+        halves = (xs[:mid], xs[mid:])  # second half is bigger if odd
+        return merge(*map(sort_merge, halves))
+
 # print(sort_merge([1, 5, 3, 6, 2]))
 
 
@@ -104,4 +97,4 @@ def sort_quick(xs):
 
         print(xs, pivot)
         return sort_quick(xs[:end_left]) + sort_quick(xs[end_left:])
-print(sort_quick([1, 5, 3, 6, 2]))
+# print(sort_quick([1, 5, 3, 6, 2]))
