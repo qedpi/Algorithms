@@ -37,16 +37,18 @@ def pattern_match_multi_exact_naive(text, patterns):
 # print(pattern_match_multi_exact_naive('bananas', ['an', 'na']))
 
 
-def prefix_trie_of_pattern(patterns):
-    # build a trie from the patterns:
+def prefix_trie_from(patterns):
+    """ Form a Prefix Trie from Patterns """
     trie = {}
 
-    for p in patterns:
-        pos = trie
-        for c in p:
-            if c not in pos:
-                pos[c] = {}
-            pos = pos[c]
+    for pattern in patterns:   # insert each pattern into the trie
+        node = trie
+        for c in pattern:
+            if c not in node:  # add char node to trie, otherwise reuse shared
+                node[c] = {}
+            node = node[c]
+
+        node['$'] = None       # detects patterns that are prefixes of others
 
     return trie
 
@@ -64,7 +66,7 @@ def trie_match(prefix, trie):
 
 
 def trie_match_multi(text, patterns):  # exact
-    trie = prefix_trie_of_pattern(patterns)
+    trie = prefix_trie_from(patterns)
     match = []
     # run each prefix of text through the trie
     for start in range(len(text)):
@@ -104,8 +106,8 @@ def num_leaves(tree):
         return sum(map(num_leaves, tree.values()))
 
 
-def flatten(xs):
-    return [item for sublist in xs for item in sublist]
+def flatten(matrix):
+    return [item for row in matrix for item in row]
 
 
 def leaf_values(tree):
