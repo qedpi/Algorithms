@@ -1,30 +1,34 @@
 
 
 def sort_bubble(xs):
-    n = len(xs)
-    in_order = False
-    for i in range(n - 1):
+    """ invariant: after nth pass, last n elements sorted """
+    for last in reversed(range(len(xs))):
+        in_order = True
+
+        for cur in range(last):
+            if xs[cur] > xs[cur + 1]:  # out of order, then swap
+                xs[cur], xs[cur + 1] = xs[cur + 1], xs[cur]
+                in_order = False
+
         if in_order:
             break
-        else:
-            in_order = True
 
-        for j in range(n - 1 - i):
-            if xs[j] > xs[j + 1]:
-                in_order = False
-                xs[j], xs[j + 1] = xs[j + 1], xs[j]
     return xs
 # print(sort_bubble([5, 4, 3, 2, 1]))
 
 
 def sort_selection(xs):
+    """ invariant: after nth pass, first n elements sorted """
     n = len(xs)
 
-    for i in range(n - 1):
-        for j in range(i + 1, n):
-            x, y = xs[i], xs[j]
-            if x > y:
-                xs[i], xs[j] = y, x
+    for start in range(n):
+        # for each position, find minimum in sub-array
+        pos_min = start
+        for cur in range(start, n):
+            if xs[cur] < xs[pos_min]:  # smaller value found
+                pos_min = cur
+
+        xs[pos_min], xs[start] = xs[start], xs[pos_min]
 
     return xs
 # print(sort_selection([1, 4, 5, 2, 188, 9]))
