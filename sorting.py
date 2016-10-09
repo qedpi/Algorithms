@@ -35,22 +35,12 @@ def sort_selection(xs):
 
 
 def sort_insertion(xs):
-    n = len(xs)
-
-    for i in range(1, n):
-        j = i - 1
-        while xs[i] < xs[j] and j >= 0:
-            j -= 1
-
-        if xs[i] < xs[j + 1]:  # out of order
-            temp = xs[i]
-            k = i
-            while k > j:
-                xs[k] = xs[k-1]
-                k -= 1
-
-            xs[j + 1] = temp
-        print(xs)
+    for i in range(1, len(xs)):
+        for j in reversed(range(i)):
+            if xs[j + 1] < xs[j]:
+                xs[j + 1], xs[j] = xs[j], xs[j + 1]
+            else:
+                break
     return xs
 #print(sort_insertion([1, 5, 3, 6, 2]))
 
